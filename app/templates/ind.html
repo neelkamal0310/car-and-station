@@ -1,0 +1,10 @@
+<h1>oeaueu</h1>
+<form action="" method='POST'>
+    {% csrf_token %}
+    <select id="stations" name="station">
+        {% for station in stations %}
+            <option value="{{ station.id }}">{{ station.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Click</button>
+</form>
